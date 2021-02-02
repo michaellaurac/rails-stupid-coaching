@@ -1,0 +1,13 @@
+<% if @question == "" then %>
+  <p class="empty">No question asked. Please, try again.</p>
+<% else %>
+  <blockquote class="question">
+    <p class="mb-0"><%= @question %></p>
+    <footer class="blockquote-footer"><cite title="author">You</cite></footer>
+  </blockquote>
+  <blockquote class="answer">
+    <p class="mb-0"><%= @answer %></p>
+    <footer class="blockquote-footer"><cite title="author">Your Coach</cite></footer>
+  </blockquote>
+<% end %>
+<%= link_to "Ask a new question", ask_path %>
